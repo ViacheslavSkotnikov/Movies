@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #333;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.slide.current {
+  opacity: 1;
+}
+
+.slide .content {
+  position: absolute;
+  bottom: 70px;
+  left: -600px;
+  opacity: 0;
+  width: 600px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  padding: 35px;
+}
+
+.slide .content h1 {
+  margin-bottom: 10px;
+}
+
+.slide.current .content {
+  opacity: 1;
+  transform: translateX(600px);
+  transition: all 0.7s ease-in-out 0.3s;
+}
+
+.buttons button#next {
+  position: absolute;
+  top: 40%;
+  right: 15px;
+}
+
+.buttons button#prev {
+  position: absolute;
+  top: 40%;
+  left: 15px;
+}
+
+.buttons button {
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  padding: 13px 15px;
+  border-radius: 50%;
+  outline: none;
+}
+
+.buttons button:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Backgorund Images */
+
+.slide:first-child {
+  background: url("images/bladeRunner.jpg") no-repeat center top/cover;
+}
+.slide:nth-child(2) {
+  background: url("images/Predator.jpg") no-repeat center top/cover;
+}
+.slide:nth-child(3) {
+  background: url("images/point.jpg") no-repeat center top/cover;
+}
+.slide:nth-child(4) {
+  background: url("images/alien.jpg") no-repeat center top/cover;
+}
+.slide:nth-child(5) {
+  background: url("images/taxi.jpg") no-repeat center top/cover;
+}
+.slide:nth-child(6) {
+  background: url("images/deer.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(7) {
+  background: url("images/rumble.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(8) {
+  background: url("images/nest.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(9) {
+  background: url("images/term.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(10) {
+  background: url("images/brazil.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(11) {
+  background: url("images/watch.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(12) {
+  background: url("images/good.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(13) {
+  background: url("images/robo.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(14) {
+  background: url("images/strange.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(15) {
+  background: url("images/train.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(16) {
+  background: url("images/shining.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(17) {
+  background: url("images/express.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(18) {
+  background: url("images/dog.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(19) {
+  background: url("images/snatch.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(20) {
+  background: url("images/side.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(21) {
+  background: url("images/detail.jpg") no-repeat center center/cover;
+}
+
+@media (max-width: 500px) {
+  .slide .content {
+    bottom: -300px;
+    left: 0;
+    width: 100%;
+  }
+
+  .slide.current .content {
+    transform: translateY(-300px);
+  }
+  .slide:first-child {
+    background: url("images/bladeRunnerSM.jpg") no-repeat center top/cover;
+  }
+  .slide:nth-child(2) {
+    background: url("images/PredatorSM.jpg") no-repeat center top/cover;
+  }
+  .slide:nth-child(3) {
+    background: url("images/pointSM.jpg") no-repeat center top/cover;
+  }
+  .slide:nth-child(4) {
+    background: url("images/alienSM.jpg") no-repeat center top/cover;
+  }
+  .slide:nth-child(5) {
+    background: url("images/taxiSM.jpg") no-repeat center top/cover;
+  }
+  .slide:nth-child(6) {
+    background: url("images/deerSM.jpg") no-repeat center center/cover;
+  }
+  .slide:nth-child(7) {
+    background: url("images/rumbleSM.jpg") no-repeat center center/cover;
+  }
+  .slide:nth-child(8) {
+    background: url("images/nest.jpg") no-repeat center center/cover;
+  }
+  .slide:nth-child(9) {
+    background: url("images/term.jpg") no-repeat center center/cover;
+  }
+  .slide:nth-child(10) {
+    background: url("images/brazil.jpg") no-repeat center center/cover;
+  }
+  .slide:nth-child(11) {
+    background: url("images/watchSM.jpg") no-repeat center center/cover;
+  }
+  .slide:nth-child(12) {
+    background: url("images/good.jpg") no-repeat center center/cover;
+  }
+  .slide:nth-child(13) {
+    background: url("images/robo.jpg") no-repeat center center/cover;
+  }
+  .slide:nth-child(14) {
+    background: url("images/strange.jpg") no-repeat center center/cover;
+  }
+  .slide:nth-child(15) {
+    background: url("images/train.jpg") no-repeat center center/cover;
+  }
+  .slide:nth-child(16) {
+    background: url("images/shining.jpg") no-repeat center center/cover;
+  }
+  .slide:nth-child(17) {
+    background: url("images/express.jpg") no-repeat center center/cover;
+  }
+  .slide:nth-child(18) {
+    background: url("images/dogSM.jpg") no-repeat center center/cover;
+  }
+  .slide:nth-child(19) {
+    background: url("images/snatch.jpg") no-repeat center center/cover;
+  }
+  .slide:nth-child(20) {
+    background: url("images/side.jpg") no-repeat center center/cover;
+  }
+  .slide:nth-child(21) {
+    background: url("images/detailSM.jpg") no-repeat center center/cover;
+  }
+}
